@@ -65,7 +65,7 @@ jobs:
       if: always()
       uses: github/codeql-action/upload-sarif@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.ENVSECRET }}      
+        GITHUB_TOKEN: ${{ secrets.DEVELOPSECRET }}      
       with:
         sarif_file: reports/report.sarif
     
