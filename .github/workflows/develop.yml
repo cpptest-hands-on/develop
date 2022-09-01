@@ -47,8 +47,7 @@ jobs:
       with:
         installDir: 'C:\cpptest'
         compilerConfig: 'gcc_9-64'
-        testConfig: 'builtin://Flow Analysis Aggressive'
-       # reportDir:  './FlowAnalysis/report'
+        testConfig: 'builtin://MISRA C 2012'
         reportFormat: xml,html,sarif
         input: './FlowAnalysis/cpptestscan.bdf'
         # For Standard
@@ -64,8 +63,6 @@ jobs:
     - name: Upload results (SARIF)
       if: always()
       uses: github/codeql-action/upload-sarif@v1
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.DEVELOPSECRET }}      
       with:
         sarif_file: reports/report.sarif
     
