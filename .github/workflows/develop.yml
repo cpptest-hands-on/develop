@@ -47,7 +47,7 @@ jobs:
       with:
         installDir: 'C:\cpptest'
         compilerConfig: 'gcc_9-64'
-        testConfig: 'builtin://MISRA C 2012'
+        testConfig: 'builtin://Flow Analysis Aggressive'
         reportFormat: xml,html,sarif
         input: './FlowAnalysis/cpptestscan.bdf'
         # For Standard
